@@ -3,8 +3,8 @@ import Movie from "./Movie/Movie";
 
 export interface IMovie {
   Title: string;
-  "US Gross": number | null;
-  "Worldwide Gross": number | null;
+  us_gross: number | null;
+  world: number | null;
   "US DVD Sales": number | null;
   "Production Budget": number | null;
   "Release Date": string;
@@ -26,7 +26,8 @@ const useMovies = () => {
   const [movies, setMovies] = useState<IMovie[]>([]);
 
   useEffect(() => {
-    fetch(process.env.NEXT_PUBLIC_API_URL + "/movies")
+    // HTTP request -> Rest API -> Real Database
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/movies`)
       .then((res) => res.json())
       .then((data: IMovie[]) => setMovies(data.slice(0, 20)))
       .catch((error) => console.error(error));
