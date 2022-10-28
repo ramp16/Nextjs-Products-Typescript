@@ -2,6 +2,7 @@ import { GetServerSideProps, NextPage } from "next";
 import React from "react";
 import { ApplicationWrapper } from "../../components/layout/ApplicationWrapper";
 import { IMovie } from "../../components/MovieList/MovieList";
+import Movie from '../../components/MovieList/Movie/Movie';
 
 interface TProps {
   movie: IMovie;
@@ -10,7 +11,7 @@ interface TProps {
 const MovieDetailPage: NextPage<TProps> = ({ movie }) => {
   return (
     <ApplicationWrapper title={movie.Title}>
-      <h1>{movie.Title}</h1>
+      <Movie movie={movie}/>
     </ApplicationWrapper>
   );
 };
