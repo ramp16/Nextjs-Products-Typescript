@@ -10,6 +10,17 @@ const nextConfig = {
         hostname: 'm.media-amazon.com',
         port: ''
       },
+      {
+        protocol: 'https',
+        hostname: 'upload.wikimedia.org',
+        port: ''
+      },
+      {
+        protocol: 'https',
+        hostname: 'assets.specialized.com',
+        port: ''
+      }
+
     ],
   },
 }
