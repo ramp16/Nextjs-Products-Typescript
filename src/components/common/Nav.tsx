@@ -1,10 +1,10 @@
 import Link from "next/link";
 import React, { FC, useContext } from 'react';
-import { userContext } from '../context/UserContext';
+import { userContext, UserContextProps } from '../context/UserContext';
 
 export const Nav: FC = () => {
 
-  const { userName, setUsername, userDetail } = useContext(userContext);
+  const { userName, setUsername, userDetail } = useContext<UserContextProps>(userContext);
 
   return (
     <nav className="w-full flex gap-5 p-6 items-center text-2xl text-black">

@@ -11,7 +11,7 @@ export default function Index() {
   const [numero, setNumero] = useState('0');
   const [isValid, setIsValid] = useState(false);
   const [checkSelected, setCheckSelected] = useState(false);
-  const [selectValue, setSelectValue] = useState();
+  const [selectValue, setSelectValue] = useState('');
   const [buttonStyle, setButtonStyle] = useState(defaultStyle);
 
   const { userName, setUsername, setUserDetail } = useContext(userContext);
@@ -36,11 +36,12 @@ export default function Index() {
     setCheckSelected(event.target.checked);
   };
 
-  const onSelectChangeHandler = (event) => {
+  const onSelectChangeHandler = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectValue(event.target.value);
     console.log('el valor del select es ', event.target.value);
   };
 
+  // @ts-ignore
   const onSubmitHandler = (event) => {
     console.log(
       'submit',
@@ -52,8 +53,8 @@ export default function Index() {
     );
     setSelectValue('');
     setUsername('');
+    // @ts-ignore
     setUserDetail({
-      username: 'Daniel Instructor',
       status: {
         enabled: true
       },
@@ -66,6 +67,7 @@ export default function Index() {
     console.log('clio en el div');
   };
 
+  // @ts-ignore
   const onClickPropagationHandler = (event) => {
     console.log('click en el segundo boton');
     event.stopPropagation();
