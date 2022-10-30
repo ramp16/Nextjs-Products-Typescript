@@ -16,8 +16,8 @@ const Home: NextPage<HomeProps> = () => {
           <h1 className="text-7xl font-bold underline text-white">
             Bienvenidos a Rootlab Movies
           </h1>
-          <span>Nombre: Daniel </span>
-          <span>email: danielinstructor@rottsta.com</span>
+          <span>Nombre: Raul Martinez </span>
+          <span>email: ra916mp@gmail.com</span>
         </div>
       </div>
     </ApplicationWrapper>

@@ -9,19 +9,19 @@ export const Nav: FC = () => {
   return (
     <nav className="w-full flex gap-5 p-6 items-center text-2xl text-black">
       <Link href="/">
-        <a>Home</a>
+        Home
       </Link>
       {/* -- 5px -- */}
       <Link href="/movies">
-        <a>Movies</a>
+        Movies
       </Link>
       <div className="flex grow justify-end text-xs">
         {userName && <span>El usuario es {userName}</span>}
         <br/>
-        {!userName && <span>No hay sesión</span>}
+        {!userName && <span>No hay sesión   </span>}
         <span>{ userDetail.status.enabled }</span>
         <span>{ userDetail.email }</span>
-        <button className="border shadow" onClick={() => {setUsername('Daniel Instructor')}}>log in</button>
+        <button className="border shadow" onClick={() => {setUsername('Raúl Martínez')}}>log in</button>
       </div>
     </nav>
   );
